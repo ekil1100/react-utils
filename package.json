@@ -1,25 +1,52 @@
 {
-  "name": "react-utils",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "name": "@ekilz/react-utils",
+  "version": "0.0.1",
+  "description": "React utilities, hooks, components.",
+  "keywords": [
+    "react",
+    "hooks",
+    "utils",
+    "components"
+  ],
   "author": "Like Zheng",
   "license": "MIT",
+  "main": "./lib/index.js",
+  "exports": {
+    "import": "./lib/index.js",
+    "require": "./lib/index.cjs"
+  },
+  "types": "./types/index.d.ts",
+  "files": [
+    "lib",
+    "types",
+    "src"
+  ],
+  "scripts": {
+    "rebuild": "run-s -l clean build:*",
+    "build": "run-s -l build:*",
+    "build:tsc": "tsc",
+    "build:rollup": "rollup -c",
+    "clean": "trash lib types",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "peerDependencies": {
     "react": ">=17.0.0",
     "react-dom": ">=17.0.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
     "@types/react": "^17.0.15",
+    "esbuild": "^0.12.17",
     "eslint": "^7.32.0",
     "eslint-config-like": "^2.1.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "rollup": "^2.55.1",
+    "rollup-plugin-esbuild": "^4.5.0",
+    "trash": "^7.2.0",
     "typescript": "^4.3.5"
   }
 }
