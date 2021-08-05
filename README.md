@@ -1,7 +1,7 @@
 # React utilities
 
+[![npm](https://img.shields.io/npm/v/@ekilz/react-utils)](https://www.npmjs.com/package/@ekilz/react-utils)
 [![publish](https://github.com/ekilzen/react-utils/actions/workflows/publish.yaml/badge.svg)](https://github.com/ekilzen/react-utils/actions/workflows/publish.yaml)
-[![npm](https://img.shields.io/npm/v/ekilz/react-utils)](https://www.npmjs.com/package/@ekilz/react-utils)
 
 This package includes some utilities for react
 
