@@ -6,14 +6,25 @@ on:
       - v*
 
 jobs:
-  publish-npm:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
       - uses: actions/setup-node@master
         with:
           node-version: 14
           registry-url: 'https://registry.npmjs.org'
-      - run: npm publish
+      - uses: pnpm/action-setup@master
+        with:
+          version: 6
+          run_install: true
+      - run: pnpm build
+      - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

@@ -1,6 +1,6 @@
 {
   "name": "@ekilz/react-utils",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "React utilities, hooks, components.",
   "keywords": [
     "react",
@@ -10,6 +10,10 @@
   ],
   "author": "Like Zheng",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ekilzen/react-utils.git"
+  },
   "main": "./lib/index.js",
   "exports": {
     "import": "./lib/index.js",
@@ -27,7 +31,7 @@
     "build:tsc": "tsc",
     "build:rollup": "rollup -c",
     "clean": "trash lib types",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "semantic-release"
   },
   "peerDependencies": {
     "react": ">=17.0.0",
@@ -46,6 +50,7 @@
     "react-dom": "^17.0.2",
     "rollup": "^2.55.1",
     "rollup-plugin-esbuild": "^4.5.0",
+    "semantic-release": "^17.4.4",
     "trash": "^7.2.0",
     "typescript": "^4.3.5"
   }
