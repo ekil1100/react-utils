@@ -3,7 +3,7 @@ name: publish
 on:
   push:
     tags:
-      - @ekilz/react-utils@*
+      - '@ekilz/react-utils@*'
 
 jobs:
   publish:
